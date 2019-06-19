@@ -3,6 +3,7 @@ import Titles from './components/Titles'
 import Form from './components/From'
 import Weather from './components/Weather'
 
+
 const API_KEY = "b02249d3a8eff0d2e4d452d5b15ef973"
 
 class App extends React.Component {
