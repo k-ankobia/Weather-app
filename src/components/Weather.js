@@ -2,13 +2,30 @@ import React from 'react'
 
 const Weather = ({city, tempurature, humidity, description, country, error }) => (
       <div> 
-        {city && country && <p>Location: {city}, {country}</p> }
-        {tempurature && <p>Temperature: {tempurature}</p> }
-        {humidity && <p>Humidity: {humidity}</p> }
-        {description && <p>Conditions:  {description}</p> }
-        {error && <p> {error}</p> }
+        {
+          city && country && <p className="weather__key">Location: 
+          <span className="weather__value">{city}, {country}</span>
+          </p> 
+        }
+        {
+          tempurature && <p className="weather__key">Temperature: 
+          <span className="weather__value">{tempurature}</span>
+          </p> 
+        }
+        {
+          humidity && <p className="weather__key">Humidity: 
+          <span className="weather__value">{humidity}</span>
+          </p> 
+        }
+        {
+          description && <p className="weather__key">Conditions:  
+          <span className="weather__value">{description}</span>
+          </p> 
+        }
+        {
+          error && <p>  {error}</p> 
+        }
       </div>
-    )
-  
+    )  
 
 export default Weather 
