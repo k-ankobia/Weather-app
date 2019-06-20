@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Weather = ({city, tempurature, humidity, description, country, error }) => (
+const Weather = ({city, temperature, humidity, description, country, error }) => (
       <div> 
         {
-          city && country && <p className="weather__key">Location: 
+          city && country && <p className="weather__key">Location:   
           <span className="weather__value">{city}, {country}</span>
           </p> 
         }
         {
-          tempurature && <p className="weather__key">Temperature: 
-          <span className="weather__value">{tempurature}</span>
+          temperature && <p className="weather__key">Temperature: 
+          <span className="weather__value">{temperature}</span>
           </p> 
         }
         {
@@ -23,7 +23,7 @@ const Weather = ({city, tempurature, humidity, description, country, error }) =>
           </p> 
         }
         {
-          error && <p>  {error}</p> 
+          error && <p className="weather__error">  {error}</p> 
         }
       </div>
     )  

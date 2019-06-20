@@ -28,12 +28,11 @@ class App extends React.Component {
     if (city && country) {
       console.log(data)
       this.setState({
-        tempurature: data.main.temp,
+        temperature: data.main.temp,
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
-        description: data.weather[0].description,
-        error: "Please enter a Valid City & Country"
+        description: data.weather[0].description
       })
     } else {
       this.setState({
@@ -62,7 +61,7 @@ class App extends React.Component {
                     getWeather={this.getWeather}
                   />
                   <Weather
-                    tempurature={this.state.tempurature}
+                    temperature={this.state.temperature}
                     city={this.state.city}
                     country={this.state.country}
                     humidity={this.state.humidity}
